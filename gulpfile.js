@@ -30,7 +30,7 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js',
 		'app/libs/OwlCarousel2-2.2.1/dist/owl.carousel.min.js',
-		'app/libs/css3-animate-it-master/js/css3-animate-it.js',
+		'app/libs/css3-animate-it-master/css3-animate-it.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
