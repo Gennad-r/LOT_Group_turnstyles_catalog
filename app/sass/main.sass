@@ -1,0 +1,323 @@
+@import "libs"
+@import "fonts"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+	background-color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+
+.to-top.s-scrolled
+	bottom: 10px
+	opacity: 1
+	box-shadow: none
+	
+.to-top
+	opacity: 0
+	right: 10px
+	bottom: -50px
+	position: fixed
+	z-index: 6
+	color: #fff
+	cursor: pointer
+	padding: 5px
+	width: 70px
+	height: 40px
+	transition: .3s ease-in
+#to-top-icon
+	transition: .3s ease-in
+	fill: $accent
+	width: 100%
+	&:hover
+		fill: lighten($accent, 25%)
+
+.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+	background-color: $accent
+	height: 3px
+.hamburger
+	transition: padding-top .3s
+	z-index: 6
+	position: absolute
+	right: 0
+	padding-top: 22px
+	display: none
+	&.h-scrolled
+		padding-top: 12px
+
+
+a 
+	color: $accent
+	&:focus, &:hover
+		color: $accent
+		text-decoration: none
+		outline: none
+h1
+	color: $accent
+	text-align: center
+	font-size: 2em
+	line-height: 1.2em
+	span
+		font-weight: normal
+		display: block
+		font-size: 16px
+		line-height: 1.2em
+		margin-top: 1em
+h2, h3
+	text-align: center
+	color: $accent
+	font-size: 1.5em
+	line-height: 1.5em
+	margin: 30px 0 15px
+	font-weight: bold
+h3
+	font-size: 1.2em
+	margin: 0 0 5px
+.navigation
+	background-color: #fff
+	padding-bottom: 15px
+.logo
+	width: 160px
+	padding-left: 15px
+	padding-top: 15px
+	float: left
+footer
+	color: #fff
+	padding-top: 30px
+	background-color: $accent
+	.glyphicon
+		margin-right: 5px
+	h3
+		color: #fff
+		text-align: left
+	.logo
+		float: none
+		padding: 0
+		margin-bottom: 15px
+	p 
+		line-height: 1.3
+		font-size: 14px
+	a
+		color: #fff
+		&:hover
+			color: #cfcfcf
+			text-decoration: none
+
+.copyrights
+	background-color: darken($accent, 5%)
+	font-size: 12px
+	padding: 12px 0 6px
+.menu
+	float: right
+	list-style: none
+	padding: 0
+	margin: 0
+	padding-top: 15px
+	padding-right: 10px
+	&>li
+		float: left
+	a 
+		display: block
+		padding: 5px 10px
+
+	a 
+		color: $accent
+		&:hover
+			text-decoration: none
+			color: lighten($accent, 15%)
+
+	&.clicked
+		width: 100%
+		li 
+			float: none
+		a 
+			padding: 10px 10px
+		#drop
+			ul
+				display: block
+				position: static
+				padding-left: 15px
+
+#drop
+	&:hover
+		ul
+			display: block
+	ul
+		position: absolute
+		display: none
+		list-style: none
+		background-color: #fff
+		padding: 0
+		margin: 0
+		border-bottom-right-radius: 3px
+		border-bottom-left-radius: 3px
+		z-index: 1000
+
+.call-action-first
+	background-image: url("../img/first-image-b.jpg")
+	background-position: center
+	background-size: cover
+	padding-top: 430px
+	padding-bottom: 15px
+	text-align: center
+	border-bottom: 1px solid #ccc
+button.turn
+	background: $accent
+	border: none
+	color: #fff
+	border-radius: 3px
+	padding: 5px 17px
+	&:focus
+		outline: none
+	&:hover
+		background: linear-gradient($accent, darken($accent, 10%), $accent)
+	&:active
+		background: linear-gradient(darken($accent, 5%), $accent, darken($accent, 5%))
+.gray
+	background-color: #efefef
+.production-item
+	margin-bottom: 30px
+.item-inner
+	background-color: #fff
+	border-radius: 3px
+	border: 1px solid #ccc
+	padding: 0 6px 6px
+	p
+		height: 140px
+		overflow: hidden
+		position: relative
+		&:after
+			content: ""
+			position: absolute
+			left: 0
+			bottom: 0
+			width: 100%
+			height: 30%
+			background: linear-gradient(rgba(255,255,255,0), #fff)
+.production-item__image-holder
+	.img-responsive
+		margin: 0 auto
+.button-holder-sect
+	margin: 25px 0 30px
+	text-align: center
+.button-holder
+	text-align: center
+.call-action-first
+	.button-holder-sect
+		margin: 35px 0 30px
+
+#our-production, #why, #faq, #contacts
+	padding-bottom: 15px
+	border-top: 1px solid #ccc
+	border-bottom: 1px solid #ccc
+#why
+	overflow: hidden
+
+.arguments-item-inner
+	h3
+		text-align: left
+
+
+.project-item
+	background-color: #fff
+	border-radius: 3px
+	border: 1px solid #ccc
+	padding: 6px 6px 0
+.modal-header
+	color: $accent
+	h4
+		font-weight: bold
+.form-group
+	text-align: left
+	label
+		font-weight: normal
+.counter
+	text-align: center
+	margin-top: 30px
+	.number
+		color: $accent
+		font-size: 36px
+		display: block
+		font-weight: bold
+.counters
+	margin-bottom: 30px
+
+.person-item__img-holder
+	width: 70px
+	height: 70px
+	margin: 0 auto
+.person-item__review
+	text-align: center
+	font-style: italic
+	.name
+		color: $accent
+		display: block
+		font-style: normal
+		font-size: 20px
+	img
+		border-radius: 50%
+
+.panel-default>.panel-heading
+	background-color: $accent
+	color: #fff
+	a:hover, a:focus
+		text-decoration: none
+		outline: none
+		color: #fff
+
+.nav-tabs
+	text-align: center
+	&>li
+		float: none
+.nav
+	li
+		display: inline-block
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover
+	color: $accent
+	font-weight: bold
+.radio
+	padding-left: 20px
+#map
+	width: 100%
+	height: 390px
+	margin-top: 6px
+
+
+
+@import "media" // Всегда в конце
